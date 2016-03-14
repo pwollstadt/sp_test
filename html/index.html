@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Welcome to sp_test’s documentation! &mdash; sp_test 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="sp_test 0.1 documentation" href="#" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li><a href="#">sp_test 0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="welcome-to-sp-test-s-documentation">
+<h1>Welcome to sp_test&#8217;s documentation!<a class="headerlink" href="#welcome-to-sp-test-s-documentation" title="Permalink to this headline">¶</a></h1>
+<p>Contents:</p>
+<div class="toctree-wrapper compound">
+<ul class="simple">
+</ul>
+</div>
+</div>
+<div class="section" id="module-multivariate_te">
+<span id="autodoc-test"></span><h1>Autodoc test<a class="headerlink" href="#module-multivariate_te" title="Permalink to this headline">¶</a></h1>
+<p>Created on Thu Mar 10 14:24:31 2016</p>
+<p>&#64;author: patricia</p>
+<dl class="class">
+<dt id="multivariate_te.Multivariate_te">
+<em class="property">class </em><tt class="descclassname">multivariate_te.</tt><tt class="descname">Multivariate_te</tt><big>(</big><em>max_lag</em>, <em>min_lag</em>, <em>cmi_calculator_name</em>, <em>target</em>, <em>source_set=None</em><big>)</big><a class="headerlink" href="#multivariate_te.Multivariate_te" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set up a network analysis using multivariate transfer entropy.</p>
+<p>Set parameters necessary for network inference using transfer entropy (TE).
+To perform network inference call analyse_network() on an instance of the
+data class.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd><dl class="first docutils">
+<dt>max_lag: maximum number of steps into the past to look for informative</dt>
+<dd>samples (maximum temporal search depth)</dd>
+<dt>min_lag: minimum number of steps into the past to look for informative</dt>
+<dd>samples (minimum temporal search depth)</dd>
+<dt>cmi_calculator_name: string with the name of the calculator to be used</dt>
+<dd>for TE estimation</dd>
+</dl>
+<p>target: index of the target process
+source_set: list of process indices used as potential sources (default:</p>
+<blockquote class="last">
+<div>all possible processes, i.e., all processes other than the target
+process)</div></blockquote>
+</dd>
+<dt>Attributes:</dt>
+<dd><dl class="first docutils">
+<dt>analyse_network: perform network inference on data, has to be run to</dt>
+<dd>first to write results to other attributes</dd>
+</dl>
+<p>conditional_full: samples in the full conditional set
+conditional_sources: samples in the conditional set coming from souces
+conditional_target: samples in the conditional set coming from target
+current_value: index of the current value in TE estimation
+estimator_name: estimator used for TE estimation
+max_lag: maximum temporal search depth
+min_lag: minimum temporal search depth
+pvalue_omnibus: p-value of the omnibus test
+pvalue_individual_sources: array of p-values for TE from individual</p>
+<blockquote>
+<div>sources to the target</div></blockquote>
+<p>sign_ominbus: statistical significance of the over-all TE
+sign_individual: array of booleans, indicates statistical significance</p>
+<blockquote>
+<div>of TE from individual sources to the target</div></blockquote>
+<p class="last">source_set: list with indices of source processes
+target: index of target process</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="multivariate_te.Multivariate_te.analyse_network">
+<tt class="descname">analyse_network</tt><big>(</big><em>data</em><big>)</big><a class="headerlink" href="#multivariate_te.Multivariate_te.analyse_network" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find multivariate transfer entropy between sources and a target.</p>
+<p>Find multivariate transfer entropy between all source processes and the
+target process. Uses multivariate, non-uniform embedding found through
+information maximisation (see Faes, ???, and Lizier, 2012). This is
+done in four steps (see Lizier and Faes for details):
+(1) find all relevant samples in the target processes&#8217; own past, by</p>
+<blockquote>
+<div>iteratively adding candidate samples that have significant
+conditional mutual information (CMI) with the current value
+(conditional on all samples that were added previously)</div></blockquote>
+<ol class="arabic simple" start="2">
+<li>find all relevant samples in the source processes&#8217; pasts (again
+by finding all candidates with significant CMI)</li>
+<li>prune the final conditional set by testing the CMI between each
+sample in the final set and the current value, conditional on all
+other samples in the final set</li>
+<li>statistics on the final set of sources (test for over-all transfer
+between the final conditional set and the current value, and for
+significant transfer of all individual samples in the set)</li>
+</ol>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference internal" href="genindex.html"><em>Index</em></a></li>
+<li><a class="reference internal" href="py-modindex.html"><em>Module Index</em></a></li>
+<li><a class="reference internal" href="search.html"><em>Search Page</em></a></li>
+</ul>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="#">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Welcome to sp_test&#8217;s documentation!</a></li>
+<li><a class="reference internal" href="#module-multivariate_te">Autodoc test</a></li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+</ul>
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/index.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li><a href="#">sp_test 0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2016, PW.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>
