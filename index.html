@@ -63,49 +63,116 @@
 <p>Set parameters necessary for network inference using transfer entropy (TE).
 To perform network inference call analyse_network() on an instance of the
 data class.</p>
-<dl class="docutils">
-<dt>Args:</dt>
-<dd><dl class="first docutils">
-<dt>max_lag: maximum number of steps into the past to look for informative</dt>
-<dd>samples (maximum temporal search depth)</dd>
-<dt>min_lag: minimum number of steps into the past to look for informative</dt>
-<dd>samples (minimum temporal search depth)</dd>
-<dt>cmi_calculator_name: string with the name of the calculator to be used</dt>
-<dd>for TE estimation</dd>
-</dl>
-<p>target: index of the target process
-source_set: list of process indices used as potential sources (default:</p>
-<blockquote class="last">
-<div>all possible processes, i.e., all processes other than the target
-process)</div></blockquote>
-</dd>
-<dt>Attributes:</dt>
-<dd><dl class="first docutils">
-<dt>analyse_network: perform network inference on data, has to be run to</dt>
-<dd>first to write results to other attributes</dd>
-</dl>
-<p>conditional_full: samples in the full conditional set
-conditional_sources: samples in the conditional set coming from souces
-conditional_target: samples in the conditional set coming from target
-current_value: index of the current value in TE estimation
-estimator_name: estimator used for TE estimation
-max_lag: maximum temporal search depth
-min_lag: minimum temporal search depth
-pvalue_omnibus: p-value of the omnibus test
-pvalue_individual_sources: array of p-values for TE from individual</p>
-<blockquote>
-<div>sources to the target</div></blockquote>
-<p>sign_ominbus: statistical significance of the over-all TE
-sign_individual: array of booleans, indicates statistical significance</p>
-<blockquote>
-<div>of TE from individual sources to the target</div></blockquote>
-<p class="last">source_set: list with indices of source processes
-target: index of target process</p>
-</dd>
-</dl>
-<dl class="method">
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>max_lag</strong> &#8211; maximum number of steps into the past to look for informative
+samples (maximum temporal search depth)</li>
+<li><strong>min_lag</strong> &#8211; minimum number of steps into the past to look for informative
+samples (minimum temporal search depth)</li>
+<li><strong>cmi_calculator_name</strong> &#8211; string with the name of the calculator to be used
+for TE estimation</li>
+<li><strong>target</strong> &#8211; index of the target process</li>
+<li><strong>source_set</strong> &#8211; list of process indices used as potential sources (default:
+all possible processes, i.e., all processes other than the target
+process)</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
 <dt id="multivariate_te.Multivariate_te.analyse_network">
-<tt class="descname">analyse_network</tt><big>(</big><em>data</em><big>)</big><a class="headerlink" href="#multivariate_te.Multivariate_te.analyse_network" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">analyse_network</tt><a class="headerlink" href="#multivariate_te.Multivariate_te.analyse_network" title="Permalink to this definition">¶</a></dt>
+<dd><p>perform network inference on data, has to be run to
+first to write results to other attributes</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="multivariate_te.Multivariate_te.conditional_full">
+<tt class="descname">conditional_full</tt><a class="headerlink" href="#multivariate_te.Multivariate_te.conditional_full" title="Permalink to this definition">¶</a></dt>
+<dd><p>samples in the full conditional set</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="multivariate_te.Multivariate_te.conditional_sources">
+<tt class="descname">conditional_sources</tt><a class="headerlink" href="#multivariate_te.Multivariate_te.conditional_sources" title="Permalink to this definition">¶</a></dt>
+<dd><p>samples in the conditional set coming from souces</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="multivariate_te.Multivariate_te.conditional_target">
+<tt class="descname">conditional_target</tt><a class="headerlink" href="#multivariate_te.Multivariate_te.conditional_target" title="Permalink to this definition">¶</a></dt>
+<dd><p>samples in the conditional set coming from target</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="multivariate_te.Multivariate_te.current_value">
+<tt class="descname">current_value</tt><a class="headerlink" href="#multivariate_te.Multivariate_te.current_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>index of the current value in TE estimation</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="multivariate_te.Multivariate_te.estimator_name">
+<tt class="descname">estimator_name</tt><a class="headerlink" href="#multivariate_te.Multivariate_te.estimator_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>estimator used for TE estimation</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="multivariate_te.Multivariate_te.max_lag">
+<tt class="descname">max_lag</tt><a class="headerlink" href="#multivariate_te.Multivariate_te.max_lag" title="Permalink to this definition">¶</a></dt>
+<dd><p>maximum temporal search depth</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="multivariate_te.Multivariate_te.min_lag">
+<tt class="descname">min_lag</tt><a class="headerlink" href="#multivariate_te.Multivariate_te.min_lag" title="Permalink to this definition">¶</a></dt>
+<dd><p>minimum temporal search depth</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="multivariate_te.Multivariate_te.pvalue_omnibus">
+<tt class="descname">pvalue_omnibus</tt><a class="headerlink" href="#multivariate_te.Multivariate_te.pvalue_omnibus" title="Permalink to this definition">¶</a></dt>
+<dd><p>p-value of the omnibus test</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="multivariate_te.Multivariate_te.pvalue_individual_sources">
+<tt class="descname">pvalue_individual_sources</tt><a class="headerlink" href="#multivariate_te.Multivariate_te.pvalue_individual_sources" title="Permalink to this definition">¶</a></dt>
+<dd><p>array of p-values for TE from individual
+sources to the target</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="multivariate_te.Multivariate_te.sign_ominbus">
+<tt class="descname">sign_ominbus</tt><a class="headerlink" href="#multivariate_te.Multivariate_te.sign_ominbus" title="Permalink to this definition">¶</a></dt>
+<dd><p>statistical significance of the over-all TE</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="multivariate_te.Multivariate_te.sign_individual">
+<tt class="descname">sign_individual</tt><a class="headerlink" href="#multivariate_te.Multivariate_te.sign_individual" title="Permalink to this definition">¶</a></dt>
+<dd><p>array of booleans, indicates statistical significance
+of TE from individual sources to the target</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="multivariate_te.Multivariate_te.source_set">
+<tt class="descname">source_set</tt><a class="headerlink" href="#multivariate_te.Multivariate_te.source_set" title="Permalink to this definition">¶</a></dt>
+<dd><p>list with indices of source processes</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="multivariate_te.Multivariate_te.target">
+<tt class="descname">target</tt><a class="headerlink" href="#multivariate_te.Multivariate_te.target" title="Permalink to this definition">¶</a></dt>
+<dd><p>index of target process</p>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<tt class="descname">analyse_network</tt><big>(</big><em>data</em><big>)</big></dt>
 <dd><p>Find multivariate transfer entropy between sources and a target.</p>
 <p>Find multivariate transfer entropy between all source processes and the
 target process. Uses multivariate, non-uniform embedding found through
