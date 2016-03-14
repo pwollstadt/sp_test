@@ -1,0 +1,28 @@
+.. sp_test documentation master file, created by
+   sphinx-quickstart on Mon Mar 14 17:19:55 2016.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Welcome to sp_test's documentation!
+===================================
+
+Contents:
+
+.. toctree::
+   :maxdepth: 2
+
+My auto-doc
+===================================
+.. automodule:: multivariate_te
+
+.. automodule:: statistics
+	:members:
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
+
