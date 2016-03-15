@@ -1,0 +1,41 @@
+\begin{theindex}
+\def\bigletter#1{{\Large\sffamily#1}\nopagebreak\vspace{1mm}}
+
+  \bigletter A
+  \item analyse\_network (multivariate\_te.Multivariate\_te attribute), \hyperpage{3}
+  \item analyse\_network() (multivariate\_te.Multivariate\_te method), \hyperpage{4}
+
+  \indexspace
+  \bigletter C
+  \item conditional\_full (multivariate\_te.Multivariate\_te attribute), \hyperpage{3}
+  \item conditional\_sources (multivariate\_te.Multivariate\_te attribute), \hyperpage{3}
+  \item conditional\_target (multivariate\_te.Multivariate\_te attribute), \hyperpage{3}
+  \item current\_value (multivariate\_te.Multivariate\_te attribute), \hyperpage{3}
+
+  \indexspace
+  \bigletter E
+  \item estimator\_name (multivariate\_te.Multivariate\_te attribute), \hyperpage{3}
+
+  \indexspace
+  \bigletter M
+  \item max\_lag (multivariate\_te.Multivariate\_te attribute), \hyperpage{3}
+  \item min\_lag (multivariate\_te.Multivariate\_te attribute), \hyperpage{3}
+  \item Multivariate\_te (class in multivariate\_te), \hyperpage{3}
+  \item multivariate\_te (module), \hyperpage{3}
+
+  \indexspace
+  \bigletter P
+  \item pvalue\_individual\_sources (multivariate\_te.Multivariate\_te attribute), \hyperpage{4}
+  \item pvalue\_omnibus (multivariate\_te.Multivariate\_te attribute), \hyperpage{3}
+
+  \indexspace
+  \bigletter S
+  \item sign\_individual (multivariate\_te.Multivariate\_te attribute), \hyperpage{4}
+  \item sign\_ominbus (multivariate\_te.Multivariate\_te attribute), \hyperpage{4}
+  \item source\_set (multivariate\_te.Multivariate\_te attribute), \hyperpage{4}
+
+  \indexspace
+  \bigletter T
+  \item target (multivariate\_te.Multivariate\_te attribute), \hyperpage{4}
+
+\end{theindex}

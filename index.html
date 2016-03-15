@@ -8,7 +8,7 @@
     
     <title>Welcome to sp_test’s documentation! &mdash; sp_test 0.1 documentation</title>
     
-    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     
     <script type="text/javascript">
@@ -25,8 +25,8 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="top" title="sp_test 0.1 documentation" href="#" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -35,14 +35,14 @@
         <li class="right" >
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li><a href="#">sp_test 0.1 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="#">sp_test 0.1 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="welcome-to-sp-test-s-documentation">
 <h1>Welcome to sp_test&#8217;s documentation!<a class="headerlink" href="#welcome-to-sp-test-s-documentation" title="Permalink to this headline">¶</a></h1>
@@ -58,7 +58,7 @@
 <p>&#64;author: patricia</p>
 <dl class="class">
 <dt id="multivariate_te.Multivariate_te">
-<em class="property">class </em><tt class="descclassname">multivariate_te.</tt><tt class="descname">Multivariate_te</tt><big>(</big><em>max_lag</em>, <em>min_lag</em>, <em>cmi_calculator_name</em>, <em>target</em>, <em>source_set=None</em><big>)</big><a class="headerlink" href="#multivariate_te.Multivariate_te" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">multivariate_te.</code><code class="descname">Multivariate_te</code><span class="sig-paren">(</span><em>max_lag</em>, <em>min_lag</em>, <em>cmi_calculator_name</em>, <em>target</em>, <em>source_set=None</em><span class="sig-paren">)</span><a class="headerlink" href="#multivariate_te.Multivariate_te" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set up a network analysis using multivariate transfer entropy.</p>
 <p>Set parameters necessary for network inference using transfer entropy (TE).
 To perform network inference call analyse_network() on an instance of the
@@ -85,94 +85,94 @@ process)</li>
 </table>
 <dl class="attribute">
 <dt id="multivariate_te.Multivariate_te.analyse_network">
-<tt class="descname">analyse_network</tt><a class="headerlink" href="#multivariate_te.Multivariate_te.analyse_network" title="Permalink to this definition">¶</a></dt>
+<code class="descname">analyse_network</code><a class="headerlink" href="#multivariate_te.Multivariate_te.analyse_network" title="Permalink to this definition">¶</a></dt>
 <dd><p>perform network inference on data, has to be run to
 first to write results to other attributes</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="multivariate_te.Multivariate_te.conditional_full">
-<tt class="descname">conditional_full</tt><a class="headerlink" href="#multivariate_te.Multivariate_te.conditional_full" title="Permalink to this definition">¶</a></dt>
+<code class="descname">conditional_full</code><a class="headerlink" href="#multivariate_te.Multivariate_te.conditional_full" title="Permalink to this definition">¶</a></dt>
 <dd><p>samples in the full conditional set</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="multivariate_te.Multivariate_te.conditional_sources">
-<tt class="descname">conditional_sources</tt><a class="headerlink" href="#multivariate_te.Multivariate_te.conditional_sources" title="Permalink to this definition">¶</a></dt>
+<code class="descname">conditional_sources</code><a class="headerlink" href="#multivariate_te.Multivariate_te.conditional_sources" title="Permalink to this definition">¶</a></dt>
 <dd><p>samples in the conditional set coming from souces</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="multivariate_te.Multivariate_te.conditional_target">
-<tt class="descname">conditional_target</tt><a class="headerlink" href="#multivariate_te.Multivariate_te.conditional_target" title="Permalink to this definition">¶</a></dt>
+<code class="descname">conditional_target</code><a class="headerlink" href="#multivariate_te.Multivariate_te.conditional_target" title="Permalink to this definition">¶</a></dt>
 <dd><p>samples in the conditional set coming from target</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="multivariate_te.Multivariate_te.current_value">
-<tt class="descname">current_value</tt><a class="headerlink" href="#multivariate_te.Multivariate_te.current_value" title="Permalink to this definition">¶</a></dt>
+<code class="descname">current_value</code><a class="headerlink" href="#multivariate_te.Multivariate_te.current_value" title="Permalink to this definition">¶</a></dt>
 <dd><p>index of the current value in TE estimation</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="multivariate_te.Multivariate_te.estimator_name">
-<tt class="descname">estimator_name</tt><a class="headerlink" href="#multivariate_te.Multivariate_te.estimator_name" title="Permalink to this definition">¶</a></dt>
+<code class="descname">estimator_name</code><a class="headerlink" href="#multivariate_te.Multivariate_te.estimator_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>estimator used for TE estimation</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="multivariate_te.Multivariate_te.max_lag">
-<tt class="descname">max_lag</tt><a class="headerlink" href="#multivariate_te.Multivariate_te.max_lag" title="Permalink to this definition">¶</a></dt>
+<code class="descname">max_lag</code><a class="headerlink" href="#multivariate_te.Multivariate_te.max_lag" title="Permalink to this definition">¶</a></dt>
 <dd><p>maximum temporal search depth</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="multivariate_te.Multivariate_te.min_lag">
-<tt class="descname">min_lag</tt><a class="headerlink" href="#multivariate_te.Multivariate_te.min_lag" title="Permalink to this definition">¶</a></dt>
+<code class="descname">min_lag</code><a class="headerlink" href="#multivariate_te.Multivariate_te.min_lag" title="Permalink to this definition">¶</a></dt>
 <dd><p>minimum temporal search depth</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="multivariate_te.Multivariate_te.pvalue_omnibus">
-<tt class="descname">pvalue_omnibus</tt><a class="headerlink" href="#multivariate_te.Multivariate_te.pvalue_omnibus" title="Permalink to this definition">¶</a></dt>
+<code class="descname">pvalue_omnibus</code><a class="headerlink" href="#multivariate_te.Multivariate_te.pvalue_omnibus" title="Permalink to this definition">¶</a></dt>
 <dd><p>p-value of the omnibus test</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="multivariate_te.Multivariate_te.pvalue_individual_sources">
-<tt class="descname">pvalue_individual_sources</tt><a class="headerlink" href="#multivariate_te.Multivariate_te.pvalue_individual_sources" title="Permalink to this definition">¶</a></dt>
+<code class="descname">pvalue_individual_sources</code><a class="headerlink" href="#multivariate_te.Multivariate_te.pvalue_individual_sources" title="Permalink to this definition">¶</a></dt>
 <dd><p>array of p-values for TE from individual
 sources to the target</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="multivariate_te.Multivariate_te.sign_ominbus">
-<tt class="descname">sign_ominbus</tt><a class="headerlink" href="#multivariate_te.Multivariate_te.sign_ominbus" title="Permalink to this definition">¶</a></dt>
+<code class="descname">sign_ominbus</code><a class="headerlink" href="#multivariate_te.Multivariate_te.sign_ominbus" title="Permalink to this definition">¶</a></dt>
 <dd><p>statistical significance of the over-all TE</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="multivariate_te.Multivariate_te.sign_individual">
-<tt class="descname">sign_individual</tt><a class="headerlink" href="#multivariate_te.Multivariate_te.sign_individual" title="Permalink to this definition">¶</a></dt>
+<code class="descname">sign_individual</code><a class="headerlink" href="#multivariate_te.Multivariate_te.sign_individual" title="Permalink to this definition">¶</a></dt>
 <dd><p>array of booleans, indicates statistical significance
 of TE from individual sources to the target</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="multivariate_te.Multivariate_te.source_set">
-<tt class="descname">source_set</tt><a class="headerlink" href="#multivariate_te.Multivariate_te.source_set" title="Permalink to this definition">¶</a></dt>
+<code class="descname">source_set</code><a class="headerlink" href="#multivariate_te.Multivariate_te.source_set" title="Permalink to this definition">¶</a></dt>
 <dd><p>list with indices of source processes</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="multivariate_te.Multivariate_te.target">
-<tt class="descname">target</tt><a class="headerlink" href="#multivariate_te.Multivariate_te.target" title="Permalink to this definition">¶</a></dt>
+<code class="descname">target</code><a class="headerlink" href="#multivariate_te.Multivariate_te.target" title="Permalink to this definition">¶</a></dt>
 <dd><p>index of target process</p>
 </dd></dl>
 
 <dl class="method">
 <dt>
-<tt class="descname">analyse_network</tt><big>(</big><em>data</em><big>)</big></dt>
+<code class="descname">analyse_network</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span></dt>
 <dd><p>Find multivariate transfer entropy between sources and a target.</p>
 <p>Find multivariate transfer entropy between all source processes and the
 target process. Uses multivariate, non-uniform embedding found through
@@ -201,9 +201,9 @@ significant transfer of all individual samples in the set)</li>
 <div class="section" id="indices-and-tables">
 <h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
-<li><a class="reference internal" href="genindex.html"><em>Index</em></a></li>
-<li><a class="reference internal" href="py-modindex.html"><em>Module Index</em></a></li>
-<li><a class="reference internal" href="search.html"><em>Search Page</em></a></li>
+<li><a class="reference internal" href="genindex.html"><span>Index</span></a></li>
+<li><a class="reference internal" href="py-modindex.html"><span>Module Index</span></a></li>
+<li><a class="reference internal" href="search.html"><span>Search Page</span></a></li>
 </ul>
 </div>
 
@@ -211,7 +211,7 @@ significant transfer of all individual samples in the set)</li>
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h3><a href="#">Table Of Contents</a></h3>
   <ul>
@@ -220,12 +220,14 @@ significant transfer of all individual samples in the set)</li>
 <li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
 </ul>
 
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="_sources/index.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/index.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
       <input type="text" name="q" />
@@ -242,7 +244,7 @@ significant transfer of all individual samples in the set)</li>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -251,12 +253,12 @@ significant transfer of all individual samples in the set)</li>
         <li class="right" >
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li><a href="#">sp_test 0.1 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="#">sp_test 0.1 documentation</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
+    <div class="footer" role="contentinfo">
         &copy; Copyright 2016, PW.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.6.
     </div>
   </body>
 </html>

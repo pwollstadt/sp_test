@@ -31,6 +31,7 @@ sys.path.insert(0, os.path.abspath('../src/'))
 extensions = [
     'sphinx.ext.autodoc', 
     'sphinxcontrib.napoleon',
+    'sphinxjp.themes.basicstrap', # https://pythonhosted.org/sphinxjp.themes.basicstrap/
 ]
 
 # Add any paths that contain templates here, relative to this directory.
